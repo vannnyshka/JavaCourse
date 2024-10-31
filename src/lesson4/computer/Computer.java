@@ -15,7 +15,6 @@ public class Computer {
     private boolean status = false;
 
 
-
     public Computer() {
 
     }

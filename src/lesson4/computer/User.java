@@ -30,9 +30,5 @@ public class User {
         computer.turnOffComputer(start);
 
 
-
-
-
-
     }
 }
