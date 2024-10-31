@@ -1,4 +1,4 @@
-package lesson4.tasks;
+package lesson3.tasks;
 
 import java.util.Scanner;
 
@@ -18,11 +18,7 @@ public class Task2 {
         System.out.println("Enter c: ");
         int c = input.nextInt();
 
-        if ((a + b) < c) {
-            System.out.println("It doesn't exist");
-        } else if ((a + c) < b) {
-            System.out.println("It doesn't exist");
-        } else if ((c + b) < a) {
+        if (((a + b) < c) || ((a + c) < b) || ((c + b) < a)) {
             System.out.println("It doesn't exist");
         } else {
             System.out.println("Horaaay!!! It exists!!!");
