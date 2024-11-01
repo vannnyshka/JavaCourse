@@ -3,7 +3,7 @@ package lesson3.tasks3.Cat;
 public class Cat {
 
     private String name;
-    private double originWeight;
+    //private double originWeight;
     private double weight;
     private CatColor color;
 
@@ -30,19 +30,26 @@ public class Cat {
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
-        originWeight = weight;
+        //originWeight = this.weight;
         amountFood = 0;
         totalCat += 1;
+        this.name = "Noname";
+        this.color = CatColor.BLACK;
     }
 
     public Cat(String name, CatColor color) {
 
+        this();
         this.color = color;
         this.name = name;
-        weight = 1500.0 + 3000.0 * Math.random();
-        originWeight = weight;
-        amountFood = 0;
-        totalCat += 1;
+
+    }
+
+    public Cat(double weight) {
+
+        this();
+        this.weight = weight;
+
     }
 
     public String getName() {
@@ -147,7 +154,7 @@ public class Cat {
     public String toString() {
         return "Cat{" +
                 "name='" + name + '\'' +
-                ", originWeight=" + originWeight +
+                //", originWeight=" + originWeight +
                 ", weight=" + weight +
                 ", color=" + color +
                 ", amountFood=" + amountFood +

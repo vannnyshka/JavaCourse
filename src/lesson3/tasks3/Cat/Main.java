@@ -1,8 +1,6 @@
 package lesson3.tasks3.Cat;
 
 
-import lesson3.tasks3.Notebook.NoteBook;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -53,5 +51,27 @@ public class Main {
 
         System.out.println(tom.getColor().equals(CatColor.BLACK));
 
+        /*5.1 Создать трех кошек с методом getKitten*/
+        Cat mia = getKitten();
+
+        System.out.println(mia);
+
+        Cat richi = getKitten();
+
+        System.out.println(richi);
+
+        Cat marta = getKitten();
+
+        System.out.println(marta);
+
+    }
+
+    /*5.2 Создайте в главном классе Loader метод генерации котёнка private static Cat getKitten().
+        Он должен возвращать кошку с весом 1100.00 грамм с помощью конструктора, в который передаём
+        вес кошки. Используйте описание из видеоурока.*/
+
+    private static Cat getKitten() {
+        Cat cat = new Cat(1100);
+        return cat;
     }
 }
