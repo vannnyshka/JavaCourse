@@ -5,12 +5,24 @@ public class Cat {
     private String name;
     private double originWeight;
     private double weight;
+    private CatColor color;
 
-    private double minWeight;
-    private double maxWeight;
+    public static final double minWeight = 1000;
+    public static final double maxWeight = 9000;
+    public static final int countEye = 2;
+
     private double amountFood;
 
     public static int totalCat = 0;
+
+
+    public void setColor(CatColor color){
+        this.color = color;
+    }
+
+    public CatColor getColor(){
+        return this.color;
+    }
 
     public static int getTotalCat() {
         return totalCat;
@@ -19,18 +31,16 @@ public class Cat {
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         amountFood = 0;
         totalCat += 1;
     }
 
-    public Cat(String name) {
+    public Cat(String name, CatColor color) {
+
+        this.color = color;
         this.name = name;
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         amountFood = 0;
         totalCat += 1;
     }
@@ -135,12 +145,12 @@ public class Cat {
 
     @Override
     public String toString() {
-        return "Cat{"
-                + "Name='" + name + '\''
-                + ", weight=" + weight
-                + ", amountFood=" + amountFood
-                + ", Status=" + getStatus()
-                + '}';
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", originWeight=" + originWeight +
+                ", weight=" + weight +
+                ", color=" + color +
+                ", amountFood=" + amountFood +
+                '}';
     }
-
 }

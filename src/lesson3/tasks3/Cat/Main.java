@@ -46,5 +46,12 @@ public class Main {
         /*3. Создать метод, который выводит количество кошек, также если одна умирает или взрывается, то количество уменьшается*/
         System.out.println(Cat.getTotalCat());
 
+        /*4. Создать перменную количества глаз у кота и установить кошкам цвет*/
+        System.out.println(Cat.countEye);
+
+        tom.setColor(CatColor.BLACK);
+
+        System.out.println(tom.getColor().equals(CatColor.BLACK));
+
     }
 }
