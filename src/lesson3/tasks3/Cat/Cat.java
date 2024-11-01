@@ -15,17 +15,22 @@ public class Cat {
 
     public static int totalCat = 0;
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
-    public void setColor(CatColor color){
+
+    public void setColor(CatColor color) {
         this.color = color;
     }
 
-    public CatColor getColor(){
+    public CatColor getColor() {
         return this.color;
     }
 
     public static int getTotalCat() {
         return totalCat;
+
     }
 
     public Cat() {
@@ -43,6 +48,21 @@ public class Cat {
         this.color = color;
         this.name = name;
 
+    }
+
+    public Cat(String name, CatColor color, double weight) {
+
+        this();
+        this.weight = weight;
+        this.color = color;
+        this.name = name;
+
+    }
+
+    public Cat(Cat copy) {
+        name = copy.getName();
+        color = copy.getColor();
+        weight = copy.getWeight();
     }
 
     public Cat(double weight) {
@@ -107,8 +127,7 @@ public class Cat {
             if (status.equals("Exploded")) {
                 totalCat -= 1;
             }
-        }
-        else {
+        } else {
             System.out.println("Your cat doesn't feed. Your cat is " + status);
         }
     }
@@ -122,8 +141,7 @@ public class Cat {
             if (status.equals("Exploded")) {
                 totalCat -= 1;
             }
-        }
-        else {
+        } else {
             System.out.println("Your cat doesn't drink. Your cat is " + status);
         }
     }
@@ -143,7 +161,7 @@ public class Cat {
             return "Exploded";
         }
         //else if (weight > originWeight) {
-           // return "Sleeping";
+        // return "Sleeping";
         //}
         else {
             return "Playing";

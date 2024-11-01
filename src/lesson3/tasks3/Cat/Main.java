@@ -56,13 +56,48 @@ public class Main {
 
         System.out.println(mia);
 
-        Cat richi = getKitten();
+        Cat rich = getKitten();
 
-        System.out.println(richi);
+        System.out.println(rich);
 
         Cat marta = getKitten();
 
         System.out.println(marta);
+
+        /*6.2 Использование метода копирования*/
+
+        Cat sia = new Cat();
+
+        System.out.println("Sia before copy: ");
+        System.out.println(sia);
+
+
+        System.out.println("Sia after copy: ");
+        System.out.println(sia);
+
+        System.out.println("Your copy: ");
+        System.out.println(tom);
+
+        /*6.3 Использовать коструктор копирования*/
+
+        Cat noriNor = new Cat(felix);
+
+        System.out.println(noriNor);
+
+        Cat nori = new Cat(felix.getName(), felix.getColor(), felix.getWeight());
+
+
+        System.out.println("FELIX:");
+        System.out.println(felix);
+        System.out.println("NORI IS COPY OF FELIX: ");
+        System.out.println(nori);
+
+        Cat petya = copyCat(nori);
+
+        petya.setName("Petya");
+        System.out.println(nori);
+        System.out.println(petya);
+
 
     }
 
@@ -71,7 +106,18 @@ public class Main {
         вес кошки. Используйте описание из видеоурока.*/
 
     private static Cat getKitten() {
-        Cat cat = new Cat(1100);
+        return new Cat(1100);
+    }
+
+    /*6.1	Сделайте метод создания «глубокой» копии кошки. Это означает, что все параметры одной кошки равны параметрам другой.
+    Используйте для этого метод копирования или конструктор копирования.*/
+
+    public static Cat copyCat(Cat copy) {
+        Cat cat = new Cat();
+        cat.setName(copy.getName());
+        cat.setColor(copy.getColor());
+        cat.setWeight(copy.getWeight());
         return cat;
     }
+
 }
