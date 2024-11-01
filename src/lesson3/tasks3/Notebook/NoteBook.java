@@ -1,4 +1,4 @@
-package lesson3.tasks3;
+package lesson3.tasks3.Notebook;
 
 import java.util.Objects;
 
