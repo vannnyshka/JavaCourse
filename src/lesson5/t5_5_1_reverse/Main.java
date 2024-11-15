@@ -1,4 +1,4 @@
-package lesson5.reverse5_5_1;
+package lesson5.t5_5_1_reverse;
 
 public class Main {
     public static void main(String[] args) {

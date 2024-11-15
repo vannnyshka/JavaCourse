@@ -1,4 +1,4 @@
-package lesson5.temperature5_5_2;
+package lesson5.t5_5_2_temperature;
 
 import java.util.Scanner;
 

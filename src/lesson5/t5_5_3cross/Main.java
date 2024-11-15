@@ -1,4 +1,4 @@
-package lesson5.cross5_5_3;
+package lesson5.t5_5_3cross;
 
 public class Main {
     public static void main(String[] args) {
