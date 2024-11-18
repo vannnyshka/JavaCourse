@@ -6,7 +6,7 @@ import lesson6.linkTasks.t7_cars.vehicles.Car;
 
 import java.util.Objects;
 
-public class Lorry extends Car {
+class Lorry extends Car {
 
     private int loadCapacity;
 
