@@ -1,0 +1,4 @@
+11:56:00.689 [main] INFO  search - Поиск станции: Площадь Восстания
+11:56:38.771 [main] WARN  exception - Произошло исключение: java.nio.file.NoSuchFileException: src\main\resource\map.json
+11:56:38.775 [main] WARN  exception - Произошло исключение: Unexpected token END OF FILE at position 0.
+11:56:45.270 [main] ERROR error - Станция не найдена: куку

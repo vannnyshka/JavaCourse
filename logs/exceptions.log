@@ -1,0 +1,2 @@
+2024-12-04 11:56:38.771 [main] WARN  exception - Произошло исключение: java.nio.file.NoSuchFileException: src\main\resource\map.json
+2024-12-04 11:56:38.775 [main] WARN  exception - Произошло исключение: Unexpected token END OF FILE at position 0.
