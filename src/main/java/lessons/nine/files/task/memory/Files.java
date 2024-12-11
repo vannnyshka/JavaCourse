@@ -17,16 +17,16 @@ public class Files {
     }
 
 
-    private static double calcFiles(String path, Mode mode){
+    private static double calcFiles(String path, Mode mode) {
         double sum = 0;
 
         try {
             File folder = new File(path);
             File[] files = folder.listFiles();
 
-            for(File file : files){
+            for (File file : files) {
 
-                if(file.isDirectory()){
+                if (file.isDirectory()) {
                     sum += calcFiles(file.getPath(), mode);
                 } else {
                     sum += file.length();
@@ -38,7 +38,7 @@ public class Files {
             System.out.println(ex.getMessage());
         }
 
-        return Math.round((sum/mode.getSize()) * 100.0) / 100.0;
+        return Math.round((sum / mode.getSize()) * 100.0) / 100.0;
     }
 
 }

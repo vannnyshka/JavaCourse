@@ -22,7 +22,7 @@ public class Main {
 
     private static boolean isPalindrome(String word) {
         char[] chars = word.toCharArray();
-        if(chars.length > 1) {
+        if (chars.length > 1) {
             for (int i = 0, j = chars.length - 1; i < j; i++, j--) {
                 if (chars[i] != chars[j]) {
                     return false;

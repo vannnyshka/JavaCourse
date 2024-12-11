@@ -13,20 +13,19 @@ public class TextFormater {
     }
 
 
-
     public static boolean isHavePalindrome(String sentence) {
 
         List<String> words = cleanAndSplitSentence(sentence);
 
         for (String word : words) {
-            if(isPalindrome(word)){
+            if (isPalindrome(word)) {
                 return true;
             }
         }
         return false;
     }
 
-    private static List<String> cleanAndSplitSentence(String sentence){
+    private static List<String> cleanAndSplitSentence(String sentence) {
 
         sentence = Pattern.compile("[^a-zа-яА-ЯA-Z0-9\\s\n]").matcher(sentence).replaceAll("");
         return List.of(sentence.split("\\s+|\n"));
@@ -36,7 +35,7 @@ public class TextFormater {
 
     private static boolean isPalindrome(String word) {
         char[] chars = word.toCharArray();
-        if(chars.length > 1) {
+        if (chars.length > 1) {
             for (int i = 0, j = chars.length - 1; i < j; i++, j--) {
                 if (chars[i] != chars[j]) {
                     return false;

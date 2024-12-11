@@ -10,7 +10,7 @@ public class TextChecker {
 
     private static final String pathToBlackList = "src/main/resources/nine/files/censorship/blackList.txt";
 
-    public static void checkText(String path){
+    public static void checkText(String path) {
 
 
         try {
@@ -34,13 +34,13 @@ public class TextChecker {
     }
 
 
-    private static boolean isBlackListSentence(String sentence){
+    private static boolean isBlackListSentence(String sentence) {
         //Убираем все ненужные символы
         sentence = Pattern.compile("[^a-zа-яА-ЯA-Z0-9\\s\n]").matcher(sentence).replaceAll("");
         //Разделяем на слова
         List<String> words = List.of(sentence.split("\\s+|\n"));
-        for(String word : words) {
-            if(isBlackListWord(word)){
+        for (String word : words) {
+            if (isBlackListWord(word)) {
                 return true;
             }
         }
@@ -48,10 +48,10 @@ public class TextChecker {
     }
 
 
-    private static boolean isBlackListWord(String word){
+    private static boolean isBlackListWord(String word) {
         try {
             List<String> blackListWords = Files.readAllLines(Paths.get(pathToBlackList));
-            for (String  blackListWord : blackListWords){
+            for (String blackListWord : blackListWords) {
                 if (blackListWord.equalsIgnoreCase(word)) {
                     return true;
                 }

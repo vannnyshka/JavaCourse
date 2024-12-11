@@ -16,20 +16,20 @@ public class Main {
         copyDirectory(pathFrom, pathTo);
     }
 
-    public static void copyDirectory(String pathFrom, String pathTo){
+    public static void copyDirectory(String pathFrom, String pathTo) {
         try {
             File folderFrom = new File(pathFrom);
             File folderTo = new File(pathTo + folderFrom.getName() + "/");
 
-            if(folderTo.exists()){
+            if (folderTo.exists()) {
                 System.out.println("Такая папка уже существует.\n Попробуйте скопировать в другой место или поменять название папки которую копируете.");
             } else {
                 folderTo.mkdir();
                 File[] files = folderFrom.listFiles();
 
-                for(File file : files){
-                    if(file.isDirectory()){
-                        copyDirectory(file.getPath()+ "/", folderTo.getPath() + "/");
+                for (File file : files) {
+                    if (file.isDirectory()) {
+                        copyDirectory(file.getPath() + "/", folderTo.getPath() + "/");
                     } else {
                         String fileName = file.getName();
                         FileInputStream inputStream = new FileInputStream(file);
@@ -45,8 +45,7 @@ public class Main {
                     }
                 }
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.getMessage();
         }
     }
