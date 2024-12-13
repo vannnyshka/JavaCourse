@@ -121,13 +121,12 @@ public class AcctTurn {
                 Matcher matcher1 = pattern.matcher(fragments[5]);
                 if (matcher1.matches()) {
                     operationName = matcher1.group(1).trim();
-                    System.out.println("Часть 1: " + operationName);
                 }
 
 
                 //Для сумм, которые могут приходить в формате "12323,23"
-                fragments[6] = fragments[6].replace("\"","").replace(",",".");
-                fragments[7] = fragments[7].replace("\"","").replace(",",".");
+                fragments[6] = fragments[6].replace("\"", "").replace(",", ".");
+                fragments[7] = fragments[7].replace("\"", "").replace(",", ".");
 
                 turns.add(new AcctTurn(
                         //Тип счёта,Номер счета,Валюта,Дата операции,Референс проводки,Описание операции,Приход,Расход
